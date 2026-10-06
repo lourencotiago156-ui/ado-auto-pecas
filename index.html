@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loja Automotiva</title>
+<meta name="description" content="Peças e acessórios automotivos de qualidade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#050507;--acc:#d7ff3a;--ambar:#ffc400;--txt:#eef0f4;--mudo:#9aa0ad;--vidro:rgba(255,255,255,.06);--borda:rgba(255,255,255,.13)}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Sora,system-ui,sans-serif;background:radial-gradient(60% 40% at 78% 8%,rgba(110,130,255,.2),transparent 70%),radial-gradient(40% 30% at 5% 60%,rgba(215,255,58,.06),transparent 70%),var(--bg);color:var(--txt);line-height:1.65;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.vidro{background:var(--vidro);border:1px solid var(--borda);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-radius:20px}
+nav{position:sticky;top:0;z-index:20;padding:14px 0}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:600;letter-spacing:.04em;text-decoration:none;font-size:1rem}
+.menu{display:none;gap:26px;font-size:.9rem;color:var(--mudo)}
+.menu a{text-decoration:none}
+.menu a:hover{color:#fff}
+@media(min-width:820px){.menu{display:flex}}
+.pilula{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#000;padding:11px 22px;border-radius:999px;font-weight:600;font-size:.9rem;text-decoration:none}
+.pilula{white-space:nowrap}
+@media(max-width:520px){#navFone{display:none}#navZap::after{content:"WhatsApp"}.logo{font-size:.9rem}}
+.pilula i{width:8px;height:8px;border-radius:50%;background:#19c25a}
+.hero{padding:40px 0 70px}
+.hero .wrap{display:grid;gap:30px;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1fr 1.15fr}}
+.tag{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--acc)}
+h1{font-weight:300;font-size:clamp(2.7rem,9vw,5.6rem);line-height:1.02;letter-spacing:-.03em;margin:16px 0 20px}
+h1 b{font-weight:600;color:var(--acc)}
+.hero p.d{color:var(--mudo);max-width:42ch;margin-bottom:28px}
+.hero .arte{display:grid;place-items:center}
+.carro{width:100%;max-width:720px;height:auto;filter:drop-shadow(0 0 50px rgba(215,255,58,.16))}
+.hero-foto{width:100%;max-width:560px;border-radius:20px;display:block}
+.stats{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-top:6px}
+.stat{padding:22px}
+.stat b{display:block;font-size:2rem;font-weight:300;letter-spacing:-.02em}
+.stat span{color:var(--mudo);font-size:.9rem}
+section{padding:78px 0}
+.rot{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;color:var(--mudo)}
+h2{font-weight:300;font-size:clamp(2rem,6vw,3.4rem);letter-spacing:-.025em;line-height:1.05;margin:12px 0 30px}
+h2 b{font-weight:600}
+.marcas{display:flex;flex-wrap:wrap;gap:10px}
+.marcas span{padding:12px 22px;border-radius:999px;border:1px solid var(--borda);background:var(--vidro)}
+.pecas{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.peca{overflow:hidden}
+.foto{aspect-ratio:4/3;display:grid;place-items:center;color:#6c7280;font-size:.85rem;background:linear-gradient(135deg,#0d0f14,#171a22)}
+.foto img{width:100%;height:100%;object-fit:cover;display:block}
+.peca .t{padding:18px 20px 22px}
+.peca h3{font-weight:600;font-size:1.1rem}
+.peca p{color:var(--mudo);font-size:.93rem;margin-top:4px}
+.preco{display:inline-block;margin-top:10px;color:var(--acc);font-weight:600}
+.difs{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.dif{padding:26px}
+.dif em{font-style:normal;color:var(--acc);font-size:.8rem;letter-spacing:.15em}
+.dif h3{font-weight:600;margin:8px 0 6px}
+.dif p{color:var(--mudo);font-size:.95rem}
+.contato .grade{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin-bottom:28px}
+.contato .caixa{padding:24px}
+.contato h3{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);margin-bottom:8px;font-weight:400}
+.contato a{text-decoration:none;font-weight:600}
+footer{padding:26px 0 96px;text-align:center;color:var(--mudo);font-size:.85rem}
+.zap{position:fixed;right:18px;bottom:18px;z-index:30;background:#1faa59;color:#fff;border-radius:999px;padding:14px 20px;font-weight:600;text-decoration:none;box-shadow:0 8px 28px rgba(0,0,0,.5)}
+</style>
+</head>
+<body>
+<nav><div class="wrap vidro" style="padding:10px 14px 10px 22px;border-radius:999px">
+  <a class="logo" id="logo" href="#"></a>
+  <div class="menu"><a href="#pecas">Peças</a><a href="#marcas">Marcas</a><a href="#qualidade">Qualidade</a><a href="#contato">Contato</a></div>
+  <a class="pilula" id="navZap" href="#" target="_blank" rel="noopener"><i></i><span id="navFone"></span></a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <div class="tag" id="tipo"></div>
+    <h1 id="titulo"></h1>
+    <p class="d" id="descricao"></p>
+    <a class="pilula" id="heroZap" href="#" target="_blank" rel="noopener"><i></i>Falar no WhatsApp</a>
+    <div class="stats" id="stats" style="margin-top:34px"></div>
+  </div>
+  <div class="arte" id="arte">
+    <svg class="carro" viewBox="0 0 700 260" role="img" aria-label="Carro esportivo">
+      <defs>
+        <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d7ff3a"/><stop offset="1" stop-color="#7a8cff"/></linearGradient>
+        <linearGradient id="cb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b3f4e"/><stop offset=".55" stop-color="#14161d"/><stop offset="1" stop-color="#07080b"/></linearGradient>
+        <linearGradient id="gl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8fb4ff" stop-opacity=".55"/><stop offset="1" stop-color="#0a0c14" stop-opacity=".9"/></linearGradient>
+        <linearGradient id="fb" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#eaffb0" stop-opacity=".5"/><stop offset="1" stop-color="#eaffb0" stop-opacity="0"/></linearGradient>
+        <g id="rd">
+          <circle r="40" fill="#07080b" stroke="#2c2e38" stroke-width="3"/>
+          <circle r="28" fill="none" stroke="url(#a)" stroke-width="3"/>
+          <g stroke="#cfd3dc" stroke-width="3" stroke-linecap="round">
+            <path d="M0 0V-26"/><path d="M0 0V-26" transform="rotate(72)"/><path d="M0 0V-26" transform="rotate(144)"/><path d="M0 0V-26" transform="rotate(216)"/><path d="M0 0V-26" transform="rotate(288)"/>
+          </g>
+          <path d="M-20 -18A27 27 0 0 1 4 -27" fill="none" stroke="#ffc400" stroke-width="6" stroke-linecap="round"/>
+          <circle r="6" fill="#d7ff3a"/>
+        </g>
+      </defs>
+      <ellipse cx="310" cy="236" rx="290" ry="12" fill="#d7ff3a" opacity=".14"/>
+      <path d="M566 138 L700 108 L700 180 L566 152 Z" fill="url(#fb)"/>
+      <path d="M52 134 L36 118 L104 113 L112 121 Z" fill="#101117" stroke="url(#a)" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M40 205 L40 150 C45 130 80 122 110 118 L190 112 C230 70 290 48 350 50 C400 52 440 90 480 112 L540 125 C565 130 575 145 572 170 L570 205 L505 205 A47.5 47.5 0 1 0 415 205 L195 205 A47.5 47.5 0 1 0 105 205 Z" fill="url(#cb)" stroke="url(#a)" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M203 112 C236 80 292 63 340 63 C386 64 420 90 452 112 Z" fill="url(#gl)" stroke="#9fb3ff" stroke-opacity=".5"/>
+      <path d="M300 112 L303 64 M300 112 L298 196" fill="none" stroke="#000" stroke-opacity=".55" stroke-width="2"/>
+      <path d="M70 142 C200 130 400 124 545 142" fill="none" stroke="#fff" stroke-opacity=".22" stroke-width="2"/>
+      <path d="M528 126 L568 138 L562 150 L524 138 Z" fill="#eaffb0"/>
+      <path d="M42 148 L68 143" stroke="#ff2e4d" stroke-width="5" stroke-linecap="round"/>
+      <use href="#rd" x="150" y="190"/><use href="#rd" x="460" y="190"/>
+    </svg>
+  </div>
+</div></header>
+
+<main>
+<section id="marcas" hidden><div class="wrap">
+  <div class="rot">Marcas</div><h2>Trabalhamos com as <b>melhores.</b></h2>
+  <div class="marcas" id="marcasLista"></div>
+</div></section>
+
+<section id="pecas"><div class="wrap">
+  <div class="rot" id="catRot"></div><h2 id="catT"></h2>
+  <div class="pecas" id="pecasLista"></div>
+</div></section>
+
+<section id="qualidade"><div class="wrap">
+  <div class="rot">Por que escolher</div><h2>Qualidade que <b>você sente.</b></h2>
+  <div class="difs" id="difs"></div>
+</div></section>
+
+<section class="contato" id="contato"><div class="wrap">
+  <div class="rot">Contato</div><h2>Fale com <b>a gente.</b></h2>
+  <div class="grade" id="grade"></div>
+  <a class="pilula" id="fimZap" href="#" target="_blank" rel="noopener"><i></i>Chamar no WhatsApp</a>
+</div></section>
+</main>
+
+<a class="zap" id="zap" href="#" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">WhatsApp</a>
+<footer id="rodape"></footer>
+
+<script>
+/* ============ EDITE APENAS ESTE BLOCO PARA CADA LOJA ============ */
+const LOJA = {
+  nome: "ADO AUTO PEÇAS",
+  tipo: "Autopeças e acessórios",
+  titulo1: "Peças novas",
+  titulo2: "para o seu veículo.",
+  descricao: "Autopeças em Videira com peças e acessórios novos para veículos e atendimento de confiança.",
+  whatsapp: "554935663132",
+  telefone: "(49) 3566-3132",
+  endereco: "Rodovia SC 453, km 55, Portal",
+  cidade: "Videira - SC",
+  horario: "",
+  instagram: "",
+  heroFoto: "",
+  destaques: [],
+  catalogo: { rotulo: "Catálogo", t1: "O que você", t2: "encontra aqui." },
+  marcas: [],
+  pecas: [
+    { nome: "Peças novas", desc: "Peças para a manutenção do seu veículo.", preco: "", foto: "" },
+    { nome: "Acessórios automotivos", desc: "Acessórios para o seu veículo.", preco: "", foto: "" },
+    { nome: "Orçamento rápido", desc: "Diga o modelo do carro e a peça que precisa.", preco: "", foto: "" }
+  ],
+  diferenciais: [
+    { t: "Atendimento direto", d: "Tire dúvidas e peça orçamento pelo WhatsApp." },
+    { t: "Qualidade", d: "Peças e serviços pensados para o seu carro render mais." },
+    { t: "Confiança", d: "Atendimento de quem conhece a região." }
+  ]
+};
+/* ===================== daqui para baixo não mexe ===================== */
+const $ = id => document.getElementById(id);
+const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt) e.textContent = txt; return e; };
+const zapLink = "https://wa.me/" + LOJA.whatsapp + "?text=" + encodeURIComponent("Olá! Vim pelo site e gostaria de um orçamento.");
+document.title = LOJA.nome + (LOJA.cidade ? " | " + LOJA.cidade : "");
+document.querySelector("meta[name=description]").content = LOJA.nome + ": " + LOJA.descricao;
+$("logo").textContent = LOJA.nome; $("tipo").textContent = LOJA.tipo; $("descricao").textContent = LOJA.descricao;
+$("navFone").textContent = LOJA.telefone;
+["navZap", "heroZap", "fimZap", "zap"].forEach(i => $(i).href = zapLink);
+const h = $("titulo"); h.append(LOJA.titulo1 + " "); const b = el("b", "", LOJA.titulo2); h.appendChild(b);
+
+if (LOJA.heroFoto) { const im = new Image(); im.src = LOJA.heroFoto; im.alt = LOJA.nome; im.className = "hero-foto"; im.onload = () => { $("arte").replaceChildren(im); }; }
+
+LOJA.destaques.slice(0, 3).forEach(s => { const c = el("div", "stat vidro"); c.append(el("b", "", s.grande), el("span", "", s.pequeno)); $("stats").appendChild(c); });
+if (LOJA.marcas.length) { $("marcas").hidden = false; LOJA.marcas.forEach(m => $("marcasLista").appendChild(el("span", "", m))); }
+
+$("catRot").textContent = LOJA.catalogo.rotulo; $("catT").append(LOJA.catalogo.t1 + " "); $("catT").appendChild(el("b", "", LOJA.catalogo.t2));
+LOJA.pecas.forEach(p => {
+  const c = el("article", "peca vidro"), f = el("div", "foto");
+  if (p.foto) { const im = new Image(); im.alt = p.nome; im.loading = "lazy"; im.src = p.foto; im.onerror = () => { f.textContent = "Foto da peça"; }; f.appendChild(im); }
+  const t = el("div", "t"); t.append(el("h3", "", p.nome), el("p", "", p.desc));
+  if (p.preco) t.appendChild(el("span", "preco", p.preco));
+  if (p.foto) c.append(f); c.append(t); $("pecasLista").appendChild(c);
+});
+LOJA.diferenciais.forEach((d, i) => { const c = el("div", "dif vidro"); c.append(el("em", "", "0" + (i + 1)), el("h3", "", d.t), el("p", "", d.d)); $("difs").appendChild(c); });
+
+function caixa(titulo, linhas) {
+  const v = linhas.filter(Boolean); if (!v.length) return;
+  const c = el("div", "caixa vidro"); c.appendChild(el("h3", "", titulo));
+  v.forEach(l => { const p = el("p"); if (l.nodeType) p.appendChild(l); else p.textContent = l; c.appendChild(p); });
+  $("grade").appendChild(c);
+}
+const lnk = (t, u) => { const a = el("a", "", t); a.href = u; a.target = "_blank"; a.rel = "noopener"; return a; };
+caixa("WhatsApp", [lnk(LOJA.telefone, zapLink), LOJA.instagram && lnk("Instagram @" + LOJA.instagram, "https://instagram.com/" + LOJA.instagram)]);
+caixa("Endereço", [LOJA.endereco, LOJA.cidade, lnk("Abrir no mapa", "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(LOJA.nome + " " + LOJA.endereco + " " + LOJA.cidade))]);
+caixa("Horário", [LOJA.horario]);
+$("rodape").textContent = "© " + LOJA.nome + (LOJA.cidade ? " · " + LOJA.cidade : "");
+</script>
+</body>
+</html>
